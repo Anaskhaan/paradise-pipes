@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+ul li a {
+    display:block;
+    color: white;
+    font-size: large;
+   }
+   
+   ul li a:hover, ul li a:focus {
+    color: whitesmoke;
+    opacity: 40%;
+    border-radius: 6px;
+    
+    
+   }
+
+   /* @media (min-width: 640px) and (max-width: 300px) {
+    .heroimg {
+      object-fit: cover;
+    }
+  } */
+  
