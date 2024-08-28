@@ -2,7 +2,7 @@ import Navbar from "../Navbar/Navbar";
 import pipe from "../../assets/pipe.jpg";
 const Hero = () => {
   return (
-    <div className="relative h-screen">
+    <div className="relative h-screen" id="hero">
       <Navbar />
       <div className="relative h-full">
         <div >
