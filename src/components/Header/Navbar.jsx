@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 import Sidebar from "./Sidebar"; 
 
 const navTabs = ["Home", "About Us", "Our Products", "Contact"];
-const routes = ["/", "/about", "/products", "/ContactUs"];
+const routes = ["/", "/about", "/Products", "/ContactUs"];
 
 const Navbar = () => {
   return (
+
     <nav className="bg-white flex items-center justify-between px-4 md:px-6 py-3 shadow-md">
       {/* Sidebar for Mobile */}
       <Sidebar navTabs={navTabs} routes={routes} />

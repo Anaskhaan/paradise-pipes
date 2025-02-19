@@ -12,7 +12,7 @@ export default function App() {
         {/* Wrap everything inside Layout */}
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} /> {/* Renders Home at "/" */}
-          <Route path="products" element={<Products />} />
+          <Route path="Products" element={<Products />} />
           <Route path="about" element={<AboutUs />} />
           <Route path="ContactUs" element={<ContactUs />} />
         </Route>
