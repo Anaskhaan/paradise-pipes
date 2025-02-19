@@ -65,15 +65,15 @@ const Footer = () => {
           </div>
 
           {/* Newsletter Section */}
-          <div className="mt-6 md:mt-0">
+          <div className="mt-6  md:mt-0">
             <h3 className="font-semibold">Newsletter</h3>
-            <div className="flex mt-2">
+            <div className="flex mt-2 ">
               <input
                 type="email"
                 placeholder="Your email"
                 className="p-2 rounded-l-md bg-gray-200 text-black focus:outline-none"
               />
-              <button className="bg-[#EA6338] text-white px-4 py-2 rounded-r-md">
+              <button className="bg-[#EA6338] text-white px-3 py-2 rounded-r-md">
                 Subscribe
               </button>
             </div>
