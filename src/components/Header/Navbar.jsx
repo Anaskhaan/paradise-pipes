@@ -1,10 +1,9 @@
-import React from "react";
 import { Search } from "lucide-react";
 import { Link } from "react-router-dom";
 import Sidebar from "./Sidebar"; 
 
 const navTabs = ["Home", "About Us", "Our Products", "Contact"];
-const routes = ["/", "/about", "/products", "/contact"];
+const routes = ["/", "/about", "/products", "/ContactUs"];
 
 const Navbar = () => {
   return (
