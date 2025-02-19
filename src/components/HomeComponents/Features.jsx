@@ -1,34 +1,36 @@
+import { ShieldCheck, HardHat, Droplet, Leaf } from "lucide-react";
+
 const features = [
   {
     title: "Extreme Durability",
     description:
       "Engineered to resist corrosion, rust, and wear, ensuring a long-lasting and reliable performance in all conditions.",
-    image: "/placeholder.png", // Replace with actual image path
+    icon: <ShieldCheck className="w-12 h-12 text-blue-600" />,
   },
   {
     title: "Impact Resistance",
     description:
       "Designed to withstand heavy impacts and pressure, preventing cracks and damage in demanding environments.",
-    image: "/placeholder.png",
+    icon: <HardHat className="w-12 h-12 text-yellow-600" />,
   },
   {
     title: "Leak-Proof",
     description:
       "Precision-sealed joints ensure a tight, leak-proof connection, reducing water loss and maintenance costs.",
-    image: "/placeholder.png",
+    icon: <Droplet className="w-12 h-12 text-blue-500" />,
   },
   {
     title: "Eco-Friendly",
     description:
       "Made from recyclable materials, PVC pipes support sustainability with low energy consumption and minimal waste.",
-    image: "/placeholder.png",
+    icon: <Leaf className="w-12 h-12 text-green-600" />,
   },
 ];
 
 const Features = () => {
   return (
     <div className="p-6 sm:p-12">
-      <h1 className="text-black flex items-center justify-center 2xl:text-3xl xl:text-3xl lg:text-3xl text-xl font-bold mb-8">
+      <h1 className="text-black flex items-center justify-center text-xl sm:text-3xl font-bold mb-8">
         Industry-Leading Features
       </h1>
 
@@ -38,14 +40,8 @@ const Features = () => {
             key={index}
             className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center text-center"
           >
-            {/* Image Placeholder */}
-            <div className="w-16 h-16 bg-gray-200 rounded-md mb-4 flex items-center justify-center">
-              <img
-                src={feature.image}
-                alt={feature.title}
-                className="w-full h-full object-contain rounded-md"
-              />
-            </div>
+            {/* Lucide Icon */}
+            <div className="mb-4">{feature.icon}</div>
 
             {/* Feature Title */}
             <h2 className="text-black font-semibold text-lg">

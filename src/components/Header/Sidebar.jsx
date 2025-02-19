@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
@@ -22,14 +22,22 @@ const Sidebar = ({ navTabs, routes }) => {
         } transition-transform duration-300 ease-in-out lg:hidden`}
       >
         {/* Close Button */}
-        <button className="absolute top-4 right-4" onClick={() => setIsOpen(false)}>
+        <button
+          className="absolute top-4 right-4"
+          onClick={() => setIsOpen(false)}
+        >
           <X size={24} />
         </button>
 
         {/* Sidebar Links */}
         <nav className="mt-16 flex flex-col space-y-6 px-6">
           {navTabs.map((tab, index) => (
-            <Link key={index} to={routes[index]} className="text-black text-lg" onClick={() => setIsOpen(false)}>
+            <Link
+              key={index}
+              to={routes[index]}
+              className="text-black text-lg"
+              onClick={() => setIsOpen(false)}
+            >
               {tab}
             </Link>
           ))}
@@ -38,7 +46,10 @@ const Sidebar = ({ navTabs, routes }) => {
 
       {/* Overlay when sidebar is open */}
       {isOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 lg:hidden" onClick={() => setIsOpen(false)}></div>
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 lg:hidden"
+          onClick={() => setIsOpen(false)}
+        ></div>
       )}
     </>
   );

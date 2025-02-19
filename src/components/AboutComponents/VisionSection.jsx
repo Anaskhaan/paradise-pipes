@@ -33,8 +33,8 @@ const VisionSection = () => {
         <motion.div
           initial={{ rotate: 0, scale: 1 }}
           animate={{ rotate: -5, scale: 1.05 }}
-          transition={{ duration: 1,}}
-          className="absolute top-3 left-3 w-96 h-full border-4 border-[#EA6338] rounded-md z-0"
+          transition={{ duration: 1 }}
+          className="absolute top-3 left-3 w-[300px] h-[360px] lg:h-[630px] xl:h-[630px] 2xl:h-[630px] lg:w-[400px] xl:w-[400px] 2xl:w-[400px]  border-4 border-[#EA6338] rounded-md z-0"
         ></motion.div>
 
         {/* Image */}

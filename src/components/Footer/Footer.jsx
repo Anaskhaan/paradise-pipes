@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className="bg-[#252E3D] text-white py-10 px-6 md:px-20">
@@ -6,8 +8,8 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <img src="/logo-icon.webp" alt="Logo Icon" className="w-10 h-10" />
-            <img src="/logo-word.webp" alt="Logo Text" className="h-6" />
+            <img src="/Footericon.webp" alt="Logo Icon" className="w-10 h-10" />
+            <img src="/Footertext.webp" alt="Logo Text" className="h-6" />
           </div>
 
           {/* Quick Links - Left */}
@@ -15,24 +17,30 @@ const Footer = () => {
             <h3 className="font-semibold">Quick Links</h3>
             <ul className="space-y-1">
               <li>
-                <a href="#" className="hover:text-gray-300">
+                <Link
+                  to="/"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  className="hover:text-gray-300"
+                >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-300">
+                <Link to="about" className="hover:text-gray-300">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-300">
+                <Link to="Products" className="hover:text-gray-300">
                   Products
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-300">
+                <Link to="ContactUs" className="hover:text-gray-300">
                   Contact Us
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -90,10 +98,10 @@ const Footer = () => {
 
           {/* Circular Icons */}
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <div className="w-6 h-6 bg-gray-400 rounded-full"></div>
-            <div className="w-6 h-6 bg-gray-400 rounded-full"></div>
-            <div className="w-6 h-6 bg-gray-400 rounded-full"></div>
-            <div className="w-6 h-6 bg-gray-400 rounded-full"></div>
+            <img src="/fb.webp" alt="facebook-logo" className=" size-6" />
+            <img src="/wa.webp" alt="whatsapp-logo" className=" size-6" />
+            <img src="/in.webp" alt="linkedin-logo" className=" size-6" />
+            <img src="/X.webp" alt="twitter" className=" size-6" />
           </div>
         </div>
       </div>

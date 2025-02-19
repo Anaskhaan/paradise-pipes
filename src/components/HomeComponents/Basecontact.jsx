@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Basecontact = () => {
   return (
@@ -13,9 +14,11 @@ const Basecontact = () => {
           long-lasting performance. Get a customized quote for your next project
           today.
         </p>
-        <button className="absolute bottom-6 md:bottom-12 right-6 md:right-10 bg-[#EA6338] rounded-3xl px-3 py-2 text-white flex items-center justify-center">
-          Contact us <ArrowRight className="mt-1" />
-        </button>
+        <Link to="ContactUs">
+          <button className="absolute bottom-6 md:bottom-12 right-6 md:right-10 bg-[#EA6338] rounded-3xl px-3 py-2 text-white flex items-center justify-center">
+            Contact us <ArrowRight className="mt-1" />
+          </button>
+        </Link>
       </div>
     </div>
   );
