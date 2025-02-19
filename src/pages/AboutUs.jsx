@@ -1,5 +1,9 @@
+
+import VisionSection from "../components/AboutComponents/VisionSection";
+
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+
 
 export default function AboutUs() {
   const applications = [
@@ -218,6 +222,7 @@ export default function AboutUs() {
             ))}
           </div>
         </div>
+        <VisionSection />
       </section>
     </div>
   );
