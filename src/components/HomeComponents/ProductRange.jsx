@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const ProductRange = () => {
   const features = [
     {
@@ -51,9 +53,11 @@ const ProductRange = () => {
         ))}
       </div>
       <div className=" flex items-center justify-center mt-4">
-        <button className="bg-[#252E3D] px-4 py-2 text-white ">
-          View all Products
-        </button>
+        <Link to="/Products">
+          <button className="bg-[#252E3D] px-4 py-2 text-white ">
+            View all Products
+          </button>
+        </Link>
       </div>
     </div>
   );
