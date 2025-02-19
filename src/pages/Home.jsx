@@ -1,4 +1,4 @@
-import Basecontact from "../components/Home-Components/basecontact";
+import Basecontact from "../components/Home-Components/Basecontact";
 import Contact from "../components/Home-Components/Contact";
 import FAQs from "../components/Home-Components/FAQs";
 import Features from "../components/Home-Components/Features";
