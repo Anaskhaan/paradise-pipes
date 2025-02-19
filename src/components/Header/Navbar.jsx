@@ -11,7 +11,6 @@ const Navbar = () => {
       {/* Sidebar for Mobile */}
       <Sidebar navTabs={navTabs} routes={routes} />
 
-      {/* Logo (Leave empty for now) */}
       <div className="px-4 md:px-16 flex items-center space-x-2">
         <img src="/logo-icon.webp" alt="logo-icon" className="w-8 md:w-auto" />
         <img src="/logo-word.webp" alt="logo-word" className="hidden md:block" />
