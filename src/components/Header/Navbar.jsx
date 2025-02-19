@@ -1,13 +1,13 @@
 import { Search } from "lucide-react";
 import { Link } from "react-router-dom";
-import Sidebar from "./Sidebar"; 
+import Sidebar from "./Sidebar";
 
 const navTabs = ["Home", "About Us", "Our Products", "Contact"];
 const routes = ["/", "/about", "/products", "/ContactUs"];
 
 const Navbar = () => {
   return (
-    <nav className="bg-white flex items-center justify-between px-4 md:px-6 py-3 shadow-md">
+    <nav className="bg-white fixed lg:top-10 xl:top-10 2xl:top-10 top-0 left-0 w-full z-50 flex items-center justify-between px-4 md:px-6 py-3 shadow-md">
       {/* Sidebar for Mobile */}
       <Sidebar navTabs={navTabs} routes={routes} />
 
@@ -39,3 +39,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+  
