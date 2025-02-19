@@ -4,7 +4,7 @@ import FAQs from "../components/HomeComponents/FAQs";
 import Features from "../components/HomeComponents/Features";
 import Hero from "../components/HomeComponents/Hero";
 import ProductRange from "../components/HomeComponents/ProductRange";
-import WhyChooseUs from "../components/HomeComponents/WhyChooseus";
+import WhyChooseUs from "../components/HomeComponents/WhyChooseUs";
 
 export default function Home() {
   return (
