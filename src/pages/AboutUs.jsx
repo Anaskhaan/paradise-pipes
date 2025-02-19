@@ -1,3 +1,5 @@
+import VisionSection from "../components/AboutComponents/VisionSection";
+
 export default function AboutUs() {
   return (
     <div>
@@ -74,6 +76,7 @@ export default function AboutUs() {
             </div>
           </div>
         </div>
+        <VisionSection />
       </section>
     </div>
   );

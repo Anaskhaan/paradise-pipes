@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
+import { Search } from 'lucide-react';
 
 const Products = () => {
-  // Sample product data
   const products = [
     {
       id: 1,
@@ -53,7 +53,6 @@ const Products = () => {
     }
   ];
 
-  // Static filters and sorting (won't trigger re-renders)
   const filters = {
     diameter: 'All',
     thickness: 'All',
@@ -69,7 +68,19 @@ const Products = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto p-6">
+    <>
+   <div className="w-full flex justify-center  mt-[100px]">
+  <div className="relative w-[60%] bg-white">
+    <Search className="absolute left-3 top-2.5 text-gray-200" size={18} />
+    <input
+      type="text"
+      placeholder="Search"
+      className="w-full pl-10 pr-4 py-2 border border-gray-200  focus:outline-none text-black"
+    />
+  </div>
+</div>
+
+    <div className="max-w-7xl mx-auto mt-4 p-6">
       <div className="text-2xl font-semibold mb-6">PVC Pipes</div>
       
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -116,7 +127,7 @@ const Products = () => {
             <button 
               onClick={resetFilters}
               className="w-full py-2 bg-gray-900 text-white rounded-md hover:bg-gray-800 transition-colors"
-            >
+              >
               Reset Filters
             </button>
           </div>
@@ -128,7 +139,7 @@ const Products = () => {
             <select 
               className="p-2 border rounded-md"
               defaultValue={sortBy}
-            >
+              >
               <option value="Most Popular">Most Popular</option>
               <option value="Newest">Newest</option>
               <option value="Price: Low to High">Price: Low to High</option>
@@ -143,7 +154,7 @@ const Products = () => {
                 className="bg-white rounded-lg shadow-sm overflow-hidden"
                 whileHover={{ y: -5 }}
                 transition={{ duration: 0.2 }}
-              >
+                >
                 <img 
                   src={product.image} 
                   alt={product.name}
@@ -166,6 +177,7 @@ const Products = () => {
         </div>
       </div>
     </div>
+            </>
   );
 };
 
