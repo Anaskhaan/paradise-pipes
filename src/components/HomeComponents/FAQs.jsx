@@ -45,7 +45,7 @@ const FAQs = () => {
           <div
             key={index}
             className={`border rounded-lg overflow-hidden ${
-              openIndex === index ? "bg-[#0163BE]" : "bg-white"
+              openIndex === index ? "bg-[#252E3D]" : "bg-white"
             }`}
           >
             <button

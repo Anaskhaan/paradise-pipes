@@ -1,5 +1,3 @@
-import React from 'react'
-
 const ManufacturingProcess = () => {
   const manufacturingSteps = [
     {
@@ -39,10 +37,12 @@ const ManufacturingProcess = () => {
                   <img
                     src={step.image}
                     alt={step.title}
-                    className="w-14 h-14 mb-4"
+                    className="h-16 w-auto  mb-4"
                   />
                   <h3 className="font-semibold text-lg">{step.title}</h3>
-                  <p className="text-gray-600 text-sm mt-2">{step.description}</p>
+                  <p className="text-gray-600 text-sm mt-2">
+                    {step.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -50,7 +50,7 @@ const ManufacturingProcess = () => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
 export default ManufacturingProcess;
