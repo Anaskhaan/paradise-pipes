@@ -5,6 +5,8 @@ import Features from "../components/HomeComponents/Features";
 import Hero from "../components/HomeComponents/Hero";
 import ProductRange from "../components/HomeComponents/ProductRange";
 import WhyChooseUs from "../components/HomeComponents/WhyChooseUs";
+import Testimonials from "../components/HomeComponents/Testimonials";
+
 
 export default function Home() {
   return (
@@ -15,7 +17,10 @@ export default function Home() {
       <ProductRange />
       <Basecontact />
       <Contact />
+     
       <FAQs />
+      <Testimonials/>
     </div>
   );
 }
+
