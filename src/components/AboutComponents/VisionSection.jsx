@@ -29,21 +29,22 @@ const VisionSection = () => {
 
       {/* Image with Animated Border */}
       <div className="md:w-1/2 relative">
-        {/* Animated Border */}
-        <motion.div
-          initial={{ rotate: 0, scale: 1 }}
-          animate={{ rotate: -5, scale: 1.05 }}
-          transition={{ duration: 1 }}
-          className="absolute top-3 left-3 w-[300px] h-[360px] lg:h-[630px] xl:h-[630px] 2xl:h-[630px] lg:w-[400px] xl:w-[400px] 2xl:w-[400px]  border-4 border-[#EA6338] rounded-md z-0"
-        ></motion.div>
+  {/* Animated Border */}
+  <motion.div
+    initial={{ rotate: 0, scale: 1 }}
+    animate={{ rotate: -5, scale: 1.05 }}
+    transition={{ duration: 1 }}
+    className="absolute top-2 left-2 w-[250px] h-[380px] lg:h-[500px] xl:h-[450px] 2xl:h-[450px] lg:w-[250px] xl:w-[280px] 2xl:w-[280px] border-4 border-[#EA6338]  z-0"
+  ></motion.div>
 
-        {/* Image */}
-        <img
-          src="/vision.webp"
-          alt="Vision"
-          className="relative w-full h-auto rounded-md shadow-lg z-10"
-        />
-      </div>
+  {/* Image */}
+  <img
+    src="/vision.webp"
+    alt="Vision"
+    className="relative w-[300px] h-[380px] lg:h-[450px] xl:h-[450px] 2xl:h-[500px] lg:w-[300px] xl:w-[350px] 2xl:w-[350px] rounded-md shadow-lg z-10"
+  />
+</div>
+
     </div>
   );
 };
