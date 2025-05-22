@@ -2,7 +2,6 @@ import VisionSection from "../components/AboutComponents/VisionSection";
 import ManufacturingProcess from "../components/AboutComponents/ManufacturingProcess";
 import ChooseUs from "../components/AboutComponents/ChooseUs";
 import ApplicationSize from "../components/AboutComponents/ApplicationSize";
-import MeetProfessionals from "../components/AboutComponents/MeetProfessionals";
 import Quote from "../components/AboutComponents/Quote";
 
 export default function AboutUs() {
@@ -38,7 +37,6 @@ export default function AboutUs() {
       <ManufacturingProcess/>
        <ApplicationSize/>
        <VisionSection />
-       <MeetProfessionals/>
        <Quote />
       
     </div>

@@ -1,107 +1,207 @@
-import { Link } from "react-router-dom";
+import { 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Clock, 
+  Send, 
+  Facebook, 
+  Twitter, 
+  Linkedin, 
+  MessageCircle,
+  ArrowRight,
+  Award,
+  Shield,
+  Truck
+} from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#252E3D] text-white py-10 px-6 md:px-20">
-      <div className="max-w-6xl mx-auto">
-        {/* Top Section */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-          {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <img src="/Footericon.webp" alt="Logo Icon" className="w-10 h-10" />
-            <img src="/Footertext.webp" alt="Logo Text" className="h-6" />
-          </div>
+    <footer className="bg-gray-900 text-white">
+      {/* Main Footer Content */}
+      <div className="px-6 md:px-20 py-16">
+        <div className="max-w-7xl mx-auto">
+          {/* Top Section */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+            
+            {/* Company Info */}
+            <div className="space-y-6">
+              <div className="flex items-center space-x-3">
+                <div className="relative">
+                  <img src="/Footericon.webp" alt="Logo Icon" className="w-12 h-12" />
+                  <div className="absolute inset-0 bg-orange-500 rounded-full opacity-20 animate-pulse"></div>
+                </div>
+                <img src="/Footertext.webp" alt="Logo Text" className="h-8" />
+              </div>
+              
+              <p className="text-gray-300 leading-relaxed">
+                Leading manufacturer of premium PVC pipes and fittings. Trusted by thousands of customers for quality, durability, and excellence in construction solutions.
+              </p>
 
-          {/* Quick Links - Left */}
-          <div className="space-y-2 mt-6 md:mt-0">
-            <h3 className="font-semibold">Quick Links</h3>
-            <ul className="space-y-1">
-              <li>
-                <Link
-                  to="/"
-                  onClick={() => {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}
-                  className="hover:text-gray-300"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="about" className="hover:text-gray-300">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link to="Products" className="hover:text-gray-300">
-                  Products
-                </Link>
-              </li>
-              <li>
-                <Link to="ContactUs" className="hover:text-gray-300">
-                  Contact Us
-                </Link>
-              </li>
-            </ul>
-          </div>
+              {/* Trust Indicators */}
+              <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2 bg-gray-800 px-3 py-2 rounded-full">
+                  <Award size={16} className="text-orange-500" />
+                  <span className="text-sm">ISO Certified</span>
+                </div>
+                <div className="flex items-center gap-2 bg-gray-800 px-3 py-2 rounded-full">
+                  <Shield size={16} className="text-green-500" />
+                  <span className="text-sm">15+ Years</span>
+                </div>
+              </div>
+            </div>
 
-          {/* Quick Links - Right */}
-          <div className="space-y-2 mt-6 md:mt-0">
-            <h3 className="font-semibold">Quick Links</h3>
-            <ul className="space-y-1">
-              <li>
-                <a href="#" className="hover:text-gray-300">
-                  Blogs
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-gray-300">
-                  Whatsapp
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-gray-300">
-                  Facebook
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-gray-300">
-                  Contact Us
-                </a>
-              </li>
-            </ul>
-          </div>
+            {/* Quick Links */}
+            <div className="space-y-6">
+              <h3 className="text-xl font-bold relative">
+                Quick Links
+                <div className="absolute bottom-0 left-0 w-12 h-1 bg-orange-500 rounded-full"></div>
+              </h3>
+              <ul className="space-y-3">
+                {[
+                  { name: "Home", path: "/" },
+                  { name: "About Us", path: "/about" },
+                  { name: "Products", path: "/Products" },
+                  { name: "Contact Us", path: "/ContactUs" },
+                  { name: "Quality Assurance", path: "/quality" },
+                  { name: "Installation Guide", path: "/guide" }
+                ].map((link, index) => (
+                  <li key={index}>
+                    <a 
+                      href={link.path}
+                      className="flex items-center gap-2 text-gray-300 hover:text-orange-500 transition-all duration-300 group"
+                    >
+                      <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-300" />
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Newsletter Section */}
-          <div className="mt-6  md:mt-0">
-            <h3 className="font-semibold">Newsletter</h3>
-            <div className="flex mt-2 ">
-              <input
-                type="email"
-                placeholder="Your email"
-                className="p-2 rounded-l-md bg-gray-200 text-black focus:outline-none"
-              />
-              <button className="bg-[#EA6338] text-white px-3 py-2 rounded-r-md">
-                Subscribe
-              </button>
+            {/* Contact Info */}
+            <div className="space-y-6">
+              <h3 className="text-xl font-bold relative">
+                Get In Touch
+                <div className="absolute bottom-0 left-0 w-12 h-1 bg-orange-500 rounded-full"></div>
+              </h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3 group">
+                  <div className="bg-gray-800 p-2 rounded-lg group-hover:bg-orange-500 transition-colors duration-300">
+                    <Phone size={16} />
+                  </div>
+                  <div>
+                    <p className="text-gray-300 text-sm">Call Us</p>
+                    <p className="font-semibold">+928-612233</p>
+                    <p className="text-gray-400 text-sm">Mon-Sat 9AM-6PM</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 group">
+                  <div className="bg-gray-800 p-2 rounded-lg group-hover:bg-orange-500 transition-colors duration-300">
+                    <Mail size={16} />
+                  </div>
+                  <div>
+                    <p className="text-gray-300 text-sm">Email Us</p>
+                    <p className="font-semibold">info@paradise.com</p>
+                    <p className="text-gray-400 text-sm">24/7 Support</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 group">
+                  <div className="bg-gray-800 p-2 rounded-lg group-hover:bg-orange-500 transition-colors duration-300">
+                    <MapPin size={16} />
+                  </div>
+                  <div>
+                    <p className="text-gray-300 text-sm">Visit Us</p>
+                    <p className="font-semibold">Industrial Area, Block A</p>
+                    <p className="text-gray-400 text-sm">City, State 12345</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 group">
+                  <div className="bg-gray-800 p-2 rounded-lg group-hover:bg-orange-500 transition-colors duration-300">
+                    <Truck size={16} />
+                  </div>
+                  <div>
+                    <p className="text-gray-300 text-sm">Free Delivery</p>
+                    <p className="font-semibold">Within 50km radius</p>
+                    <p className="text-gray-400 text-sm">Orders above $500</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Newsletter */}
+            <div className="space-y-6">
+              <h3 className="text-xl  font-bold relative">
+                Stay Updated
+                <div className="absolute bottom-0 left-0 w-12 h-1  bg-orange-500 rounded-full"></div>
+              </h3>
+              
+              <p className="text-gray-300 text-sm">
+                Subscribe to get latest updates on new products, offers, and industry insights.
+              </p>
+
+              <div className="space-y-4">
+                <div className="relative">
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="w-full p-4 bg-gray-800 text-white rounded-xl border border-gray-700 focus:border-orange-500 focus:outline-none transition-colors duration-300 pr-12"
+                  />
+                  <button className="absolute right-2 top-2 bg-orange-500 hover:bg-orange-600 p-2 rounded-lg transition-colors duration-300">
+                    <Send size={16} />
+                  </button>
+                </div>
+
+                <div className="flex items-center gap-2 text-sm text-gray-400">
+                  <input type="checkbox" className="rounded" />
+                  <span>I agree to receive marketing emails</span>
+                </div>
+              </div>
+
+              {/* Social Media */}
+              <div className="space-y-3">
+                <p className="text-sm font-medium">Follow Us</p>
+                <div className="flex gap-3">
+                  {[
+                    { icon: Facebook, color: "hover:bg-blue-600", name: "Facebook" },
+                    { icon: Twitter, color: "hover:bg-blue-400", name: "Twitter" },
+                    { icon: Linkedin, color: "hover:bg-blue-700", name: "LinkedIn" },
+                    { icon: MessageCircle, color: "hover:bg-green-600", name: "WhatsApp" }
+                  ].map((social, index) => (
+                    <a
+                      key={index}
+                      href="#"
+                      className={`bg-gray-800 p-3 rounded-xl ${social.color} transition-all duration-300 hover:scale-110 group`}
+                      title={social.name}
+                    >
+                      <social.icon size={18} />
+                    </a>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
+
+          
         </div>
+      </div>
 
-        {/* Divider Line */}
-        <div className="border-t border-gray-500 my-6"></div>
-
-        {/* Bottom Section */}
-        <div className="flex flex-col md:flex-row justify-between items-center text-sm">
-          <p>Need assistance: +928-612233</p>
-          <p>Copyright© All rights reserved.</p>
-
-          {/* Circular Icons */}
-          <div className="flex space-x-4 mt-4 md:mt-0">
-            <img src="/fb.webp" alt="facebook-logo" className=" size-6" />
-            <img src="/wa.webp" alt="whatsapp-logo" className=" size-6" />
-            <img src="/in.webp" alt="linkedin-logo" className=" size-6" />
-            <img src="/X.webp" alt="twitter" className=" size-6" />
+      {/* Bottom Section */}
+      <div className="bg-gray-950 px-6 md:px-20 py-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="flex flex-col md:flex-row gap-4 text-sm text-gray-400">
+              <p>© 2024 Paradise PVC. All rights reserved.</p>
+              <div className="flex gap-4">
+                <a href="#" className="hover:text-orange-500 transition-colors duration-300">Privacy Policy</a>
+                <a href="#" className="hover:text-orange-500 transition-colors duration-300">Terms of Service</a>
+                <a href="#" className="hover:text-orange-500 transition-colors duration-300">Sitemap</a>
+              </div>
+            </div>
+            
+           
           </div>
         </div>
       </div>
