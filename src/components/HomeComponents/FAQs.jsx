@@ -45,7 +45,7 @@ const FAQs = () => {
           <div
             key={index}
             className={`border rounded-lg overflow-hidden ${
-              openIndex === index ? "bg-[#0163BE]" : "bg-white"
+              openIndex === index ? "bg-[#252E3D]" : "bg-white"
             }`}
           >
             <button
@@ -54,6 +54,7 @@ const FAQs = () => {
                 openIndex === index ? "text-white" : "text-[#515151] "
               }`}
             >
+              {/*  */}
               <span>{faq.question}</span>
               <ChevronDown
                 className={`w-5 h-5 transition-duration-500 ${
