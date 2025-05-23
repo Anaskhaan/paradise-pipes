@@ -54,6 +54,7 @@ const FAQs = () => {
                 openIndex === index ? "text-white" : "text-[#515151] "
               }`}
             >
+              {/*  */}
               <span>{faq.question}</span>
               <ChevronDown
                 className={`w-5 h-5 transition-duration-500 ${
