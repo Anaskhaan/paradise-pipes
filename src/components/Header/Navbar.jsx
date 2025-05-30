@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 import { Search, Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
+import logo from "../../assets/logo.svg";
+import logof from "../../assets/logo-f.svg"; // Adjust the path as necessary
 
 const navTabs = ["Home", "About Us", "Our Products", "Contact"];
 const routes = ["/", "/about", "/Products", "/ContactUs"];
@@ -21,26 +24,25 @@ const Navbar = () => {
     <>
       <nav
         className={`fixed left-0 w-full z-50 transition-all duration-300 ease-in-out ${
-          isScrolled 
-            ? "top-0 bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100" 
+          isScrolled
+            ? "top-0 bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100"
             : "lg:top-10 xl:top-10 2xl:top-10 top-0 bg-white shadow-md"
         }`}
       >
         <div className="px-4 md:px-8 lg:px-12 xl:px-16">
           <div className="flex items-center justify-between py-4">
-            
             {/* Logo Section */}
             <div className="flex items-center space-x-3 group">
               <div className="relative">
-                <img 
-                  src="/logo-icon.webp" 
-                  alt="logo-icon" 
-                  className="w-10 h-10 md:w-12 md:h-12 transition-transform duration-300 group-hover:scale-110" 
+                <img
+                  src={logo}
+                  alt="logo-icon"
+                  className="w-10 h-10 md:w-12 md:h-12 transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-red-500 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </div>
               <img
-                src="/logo-word.webp"
+                src={logof}
                 alt="logo-word"
                 className="hidden md:block h-8 transition-opacity duration-300 group-hover:opacity-80"
               />
@@ -49,27 +51,27 @@ const Navbar = () => {
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
               {navTabs.map((tab, index) => (
-                <a
+                <Link
                   key={index}
-                  href={routes[index]}
-                  className="relative text-gray-700 font-medium hover:text-orange-500 transition-all duration-300 group py-2"
+                  to={routes[index]}
+                  className="relative text-gray-700 font-medium hover:text-[#134697] transition-all duration-300 group py-2"
                 >
                   {tab}
-                  <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-red-500 group-hover:w-full transition-all duration-300"></div>
-                </a>
+                  <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#134697] group-hover:w-full transition-all duration-300"></div>
+                </Link>
               ))}
             </div>
 
             {/* CTA Button & Mobile Menu */}
             <div className="flex items-center space-x-4">
               {/* Get Quote Button */}
-              <a 
-                href="/ContactUs" 
+              <a
+                href="/ContactUs"
                 className="hidden lg:block relative overflow-hidden group"
               >
-                <button className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-2.5 rounded-full font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/25 hover:scale-105">
-                  <span className="relative z-10">Get a Quote</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <button className="bg-[#134697] text-white px-6 py-2.5 rounded-full font-semibold transition-all duration-300">
+                  <span className="relative z-10">Become a Wholesaler</span>
+                  {/* <div className="absolute inset-0 bg-[#134697] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div> */}
                 </button>
               </a>
 
@@ -137,7 +139,7 @@ const Navbar = () => {
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   <button className="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white py-3 px-6 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
-                    Get a Quote
+                    Become a sel
                   </button>
                 </a>
               </div>

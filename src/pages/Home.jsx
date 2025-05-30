@@ -1,12 +1,11 @@
 import Basecontact from "../components/HomeComponents/Basecontact";
-import Contact from "../components/HomeComponents/Contact";
 import FAQs from "../components/HomeComponents/FAQs";
 import Features from "../components/HomeComponents/Features";
 import Hero from "../components/HomeComponents/Hero";
 import ProductRange from "../components/HomeComponents/ProductRange";
 import WhyChooseUs from "../components/HomeComponents/WhyChooseUs";
 import Testimonials from "../components/HomeComponents/Testimonials";
-
+import Quality from "../components/HomeComponents/Quality";
 
 export default function Home() {
   return (
@@ -16,11 +15,9 @@ export default function Home() {
       <WhyChooseUs />
       <ProductRange />
       <Basecontact />
-      <Contact />
-     
+      <Quality />
       <FAQs />
-      <Testimonials/>
+      <Testimonials />
     </div>
   );
 }
-

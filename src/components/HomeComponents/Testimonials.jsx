@@ -1,104 +1,64 @@
-import { Star, Quote } from "lucide-react";
+import p1 from "../../assets/engahmad.svg";
+import p2 from "../../assets/deptt.svg";
+import p3 from "../../assets/engsana.svg";
 
 const Testimonials = () => {
   const testimonials = [
     {
       name: "Engr. Ahmad Khan",
       title: "Chief Engineer Alpha Constructions",
-      quote: "Exceptional Quality & Durability",
       text: "We've been using Paradise PVC pipes for our construction projects, and the quality is outstanding. The pipes are durable, leakproof, and easy to install. Highly recommended.",
-      image: "/images/testimonial1.jpg",
+      image: p1,
     },
     {
-      name: "Engr. Ahmad Khan",
-      title: "Chief Engineer Alpha Constructions", 
-      quote: "Exceptional Quality & Durability",
-      text: "We've been using Paradise PVC pipes for our construction projects, and the quality is outstanding. The pipes are durable, leakproof, and easy to install. Highly recommended.",
-      image: "/images/testimonial2.jpg",
+      name: "Procurement Deptt",
+      title: "Punjab Municipal Works",
+      text: "We source thousands of meters annually, and these pipes always meet our quality and delivery standards. They are weather-resistant and perform reliably in diverse climates.",
+      image: p2,
     },
     {
-      name: "Engr. Ahmad Khan",
-      title: "Chief Engineer Alpha Constructions",
-      quote: "Exceptional Quality & Durability", 
-      text: "We've been using Paradise PVC pipes for our construction projects, and the quality is outstanding. The pipes are durable, leakproof, and easy to install. Highly recommended.",
-      image: "/images/testimonial3.jpg",
+      name: "Engr. Sanaullah Malik",
+      title: "Site Eng., Urban Site Solution",
+      text: "The precision in sizing and strength of these uPVC pipes is outstanding. No cracks or leaks even under pressure. They've become our go-to choice for plumbing and drainage installations.",
+      image: p3,
     },
   ];
 
   return (
-    <div className="bg-gray-100 p-8 md:p-16">
-      {/* Header */}
-      <div className="text-center mb-16">
-        <div className="flex items-center justify-center gap-2 mb-4">
-          {[...Array(5)].map((_, i) => (
-            <Star key={i} size={24} className="text-yellow-400 fill-current" />
-          ))}
-        </div>
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-          What our clients say
-        </h2>
-        <div className="w-24 h-1 bg-gray-800 mx-auto rounded-full"></div>
-      </div>
+    <div className="bg-[#f8f9fa] py-16 px-4">
+      {/* Section Header */}
+      <h2 className="text-xl text-[#134697] font-semibold mb-12 ml-4 md:ml-16">
+        What our Clients says About Us
+      </h2>
 
       {/* Testimonials Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className="group relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 border border-gray-200"
+            className="bg-white rounded-lg shadow-sm p-6 border border-gray-200"
           >
-            {/* Quote Icon */}
-            <div className="absolute -top-4 left-8">
-              <div className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center group-hover:bg-gray-900 transition-colors duration-300">
-                <Quote size={20} className="text-white" />
-              </div>
-            </div>
-
-            {/* Stars */}
-            <div className="flex gap-1 mb-6 mt-4">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} size={16} className="text-yellow-400 fill-current" />
-              ))}
-            </div>
-
-            {/* Quote */}
-            <h3 className="text-xl font-bold text-gray-800 mb-4 group-hover:text-gray-900 transition-colors duration-300">
-              {testimonial.quote}
-            </h3>
-
-            {/* Text */}
-            <p className="text-gray-600 mb-8 leading-relaxed">
-              {testimonial.text}
-            </p>
-
             {/* Profile */}
-            <div className="flex items-center">
-              <div className="relative">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="w-14 h-14 rounded-full object-cover border-4 border-gray-100 group-hover:border-gray-300 transition-colors duration-300"
-                />
-                <div className="absolute inset-0 rounded-full bg-gray-800 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
-              </div>
-              <div className="ml-4">
-                <h4 className="font-bold text-gray-800 text-lg">
+            <div className="flex items-center mb-4">
+              <img
+                src={testimonial.image}
+                alt={testimonial.name}
+                className="w-12 h-12 rounded-full object-cover mr-4"
+              />
+              <div>
+                <h4 className="text-sm font-bold text-[#134697]">
                   {testimonial.name}
                 </h4>
-                <p className="text-gray-500 text-sm">
-                  {testimonial.title}
-                </p>
+                <p className="text-xs text-gray-500">{testimonial.title}</p>
               </div>
             </div>
-
-            {/* Hover Effect Border */}
-            <div className="absolute bottom-0 left-0 w-0 h-1 bg-gray-800 rounded-full group-hover:w-full transition-all duration-300"></div>
+            {/* Testimonial Text */}
+            <p className="text-sm text-gray-700 leading-relaxed">
+              {testimonial.text}
+            </p>
           </div>
         ))}
       </div>
-
-      {/* Bottom Decoration */}
-      
     </div>
   );
 };

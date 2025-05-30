@@ -37,7 +37,9 @@ const FAQs = () => {
   return (
     <div className="max-w-3xl max-h-7xl  mx-auto p-6">
       <div className="mb-8 text-center">
-        <h2 className="text-3xl font-extrabold">Frequently Asked Questions</h2>
+        <h2 className="text-3xl text-[#134697] font-extrabold">
+          Frequently Asked Questions
+        </h2>
       </div>
 
       <div className="space-y-4">
@@ -45,7 +47,7 @@ const FAQs = () => {
           <div
             key={index}
             className={`border rounded-lg overflow-hidden ${
-              openIndex === index ? "bg-[#252E3D]" : "bg-white"
+              openIndex === index ? "bg-[#134697]" : "bg-white"
             }`}
           >
             <button
@@ -60,7 +62,7 @@ const FAQs = () => {
                 className={`w-5 h-5 transition-duration-500 ${
                   openIndex === index
                     ? "rotate-180 text-white"
-                    : "text-[#515151]"
+                    : "text-[#134697]"
                 }`}
               />
             </button>
