@@ -24,7 +24,7 @@ export const products = [
     pressureRating: "PN20",
     temperatureRange: "-5°C to 70°C",
     length: "3 meters",
-    image: "/productimg2.svg",
+    image: "/hi-pre4.svg",
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ export const products = [
     pressureRating: "PN6",
     temperatureRange: "0°C to 50°C",
     length: "6 meters",
-    image: "/productimg3.svg",
+    image: "/hi-pre12.svg",
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ export const products = [
     pressureRating: "PN25",
     temperatureRange: "-20°C to 90°C",
     length: "12 meters",
-    image: "/productimg4.svg",
+    image: "/hi-pre12.svg",
   },
   {
     id: 6,
@@ -51,6 +51,6 @@ export const products = [
     pressureRating: "PN18",
     temperatureRange: "-10°C to 60°C",
     length: "8 meters",
-    image: "/productimg5.svg",
+    image: "/hi-pre12.svg",
   },
 ];
