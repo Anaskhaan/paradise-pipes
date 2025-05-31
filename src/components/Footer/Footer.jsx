@@ -1,6 +1,6 @@
-import { Facebook, Twitter, Linkedin, MessageCircle } from "lucide-react";
-import logo from "../../assets/f1.svg";
-import logof from "../../assets/f2.svg";
+import Icons from "../../assets/icons";
+import Images from "../../assets/images";
+
 const Footer = () => {
   return (
     <footer className="bg-blue-800 text-white">
@@ -12,9 +12,9 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <div className="relative">
-                  <img src={logo} alt="Logo Icon" className="w-10 h-10 z-50" />
+                  <img src={Icons.logo} alt="Logo Icon" className="w-10 h-10 z-50" />
                 </div>
-                <img src={logof} alt="Logo Text" className="h-6" />
+                <img src={Icons.logof} alt="Logo Text" className="h-6" />
               </div>
 
               <p className="text-blue-100 text-sm leading-relaxed max-w-xs">
@@ -106,34 +106,31 @@ const Footer = () => {
               <h3 className="text-white font-semibold">Quick Follow</h3>
 
               {/* Social Media Icons */}
-              <div className="flex gap-2">
+              <div className="flex gap-6">
                 <a
                   href="#"
-                  className="bg-blue-700 hover:bg-blue-600 p-2 rounded transition-colors duration-300"
                   title="Facebook"
                 >
-                  <Facebook size={16} />
+                  <img src={Images.fb} className="size-6" alt="facebook-icon" />
                 </a>
                 <a
                   href="#"
-                  className="bg-blue-700 hover:bg-green-600 p-2 rounded transition-colors duration-300"
                   title="WhatsApp"
                 >
-                  <MessageCircle size={16} />
+                  <img src={Images.whatsapp} className="size-6" alt="whatsapp-icon" />
                 </a>
                 <a
                   href="#"
-                  className="bg-blue-700 hover:bg-blue-600 p-2 rounded transition-colors duration-300"
                   title="LinkedIn"
                 >
-                  <Linkedin size={16} />
+                  <img src={Images.LinkedIn} className="size-6" alt="LinkedIn-icon" />
                 </a>
                 <a
                   href="#"
-                  className="bg-blue-700 hover:bg-blue-400 p-2 rounded transition-colors duration-300"
                   title="Twitter"
                 >
-                  <Twitter size={16} />
+                  <img src={Images.X} className="size-6" alt="twitter-icon" />
+
                 </a>
               </div>
             </div>

@@ -54,3 +54,20 @@ export const products = [
     image: "/hi-pre12.svg",
   },
 ];
+
+
+
+export   const AboutStats = [
+    {
+      number: "24+",
+      title:"Years Experience"
+    },
+    {
+      number: "5000+",
+      title:"Mega Projects"
+    },
+    {
+      number: "98%",
+      title:"Customer Satisfaction"
+    },
+  ]
