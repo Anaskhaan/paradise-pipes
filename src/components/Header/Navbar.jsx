@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import { Search, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.svg";
 import logof from "../../assets/logo-f.svg"; // Adjust the path as necessary
 
-const navTabs = ["Home", "About Us", "Our Products", "Contact"];
+const navTabs = ["Home", "About Us", "Products", "Contact"];
 const routes = ["/", "/about", "/Products", "/ContactUs"];
 
 const Navbar = () => {
