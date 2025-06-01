@@ -3,11 +3,9 @@ import hero from "../../assets/heroimg.svg";
 const Hero = () => {
   return (
     <div
-      className="relative  bg-center bg-contain bg-no-repeat flex items-center justify-center h-screen w-full"
+      className="relative  bg-center bg-contain bg-no-repeat flex items-center justify-center h-[500px] w-full"
       style={{ backgroundImage: `url(${hero})` }}
     >
-      {/* Left Shadow Overlay */}
-
       {/* Content */}
       <div className="relative flex flex-col items-start  space-y-4  px-6 md:px-12 lg:px-24 xl:px-32 text-left">
         <h1 className="text-white w-full  font-bold text-xl sm:text-4xl md:text-5xl">
