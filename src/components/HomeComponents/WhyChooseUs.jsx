@@ -23,10 +23,10 @@ const WhyChooseUs = () => {
         {/* Right Side - Text Content */}
         <div>
           {/* Heading with Blue Line */}
-          <div className="flex items-center gap-2">
-            <h2 className="text-gray-900 font-semibold text-sm">
+          <div className="flex items-center gap-2 text-xl font-bold">
+            <h2 className="text-gray-900 ">
               About{" "}
-              <span className="text-[#003E75] font-bold tracking-wide">
+              <span className="text-[#003E75] tracking-wide font-orbitron">
                 PARADISE
               </span>{" "}
               Pipes

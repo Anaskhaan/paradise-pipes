@@ -19,7 +19,7 @@ const Features = () => {
 
   return (
     <div className="bg-[#eaf0fa] py-16 px-4">
-      <div className="max-w-6xl mx-auto bg-white rounded-lg shadow-md p-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="max-w-6xl mx-auto bg-white h-56 rounded-lg shadow-md p-8 grid grid-cols-1 md:grid-cols-3 gap-8">
         {features.map((feature, index) => (
           <div key={index}>
             <h3 className="text-blue-800 font-bold text-lg mb-3">
