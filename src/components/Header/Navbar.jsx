@@ -23,10 +23,11 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed left-0 w-full z-50 transition-all duration-300 ease-in-out ${isScrolled
+        className={`fixed left-0 w-full z-50 transition-all duration-300 ease-in-out ${
+          isScrolled
             ? "top-0 bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100"
             : "lg:top-10 xl:top-10 2xl:top-10 top-0 bg-white shadow-md"
-          }`}
+        }`}
       >
         <div className="px-4 md:px-8 lg:px-12 xl:px-16">
           <div className="flex items-center justify-between py-4">
@@ -38,7 +39,6 @@ const Navbar = () => {
                   alt="logo-icon"
                   className="w-10 h-10 md:w-12 md:h-12 transition-transform duration-300 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-red-500 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </div>
               <img
                 src={logof}
@@ -88,14 +88,16 @@ const Navbar = () => {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden transition-opacity duration-300 ${isMobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-          }`}
+        className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden transition-opacity duration-300 ${
+          isMobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
         onClick={() => setIsMobileMenuOpen(false)}
       >
         {/* Mobile Menu Panel */}
         <div
-          className={`fixed right-0 top-0 h-full w-80 bg-white shadow-2xl transform transition-transform duration-300 ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
-            }`}
+          className={`fixed right-0 top-0 h-full w-80 bg-white shadow-2xl transform transition-transform duration-300 ${
+            isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex flex-col h-full">

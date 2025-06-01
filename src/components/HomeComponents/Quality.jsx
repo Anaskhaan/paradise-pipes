@@ -6,10 +6,13 @@ const Quality = () => {
       {/* Header Section */}
       <div className="grid md:grid-cols-2 gap-6 items-start">
         {/* Left Text Content */}
-        <div className="space-y-4">
-          <h2 className="text-center text-blue-700 font-semibold text-sm border-t border-b border-gray-300 py-2">
-            Quality Of Our Products
-          </h2>
+        <div className="space-y-4 ">
+          <div className="flex items-center  space-x-2">
+            <div className="h-[3px] w-36 bg-gray-500"></div>
+            <h2 className="text-center text-[#134697] font-bold text-xl py-2">
+              Quality Of Our Products
+            </h2>
+          </div>
 
           <h3 className="text-blue-900 font-bold text-lg">
             At our manufacturing facility, quality is more than a commitment –
@@ -44,12 +47,21 @@ const Quality = () => {
         </div>
 
         {/* Right Image */}
-        <div className="flex justify-center md:justify-end">
-          <img
-            src={qua}
-            alt="Worker in warehouse"
-            className="w-full max-w-xs rounded shadow-md"
-          />
+
+        <div className="relative w-fit mx-auto mt-4">
+          {/* Top-left horizontal line */}
+          <div className="absolute top-0  w-[400px] h-[2px] bg-[#134697]"></div>
+
+          {/* Top-left vertical line */}
+
+          {/* Image */}
+          <img src={qua} alt="Worker in warehouse" className="p-4" />
+
+          {/* Bottom-right horizontal line */}
+          <div className="absolute bottom-0  left-0 w-[70%] h-[2px] bg-[#134697]"></div>
+
+          {/* Bottom-right vertical line */}
+          <div className="absolute bottom-0  left-0 w-[2px] h-[40px] bg-[#134697]"></div>
         </div>
       </div>
 
