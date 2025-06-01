@@ -11,6 +11,7 @@ import Products from "./pages/Products";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import ProductDetails from "./components/ProductDetails";
+import BecomeWholeSeller from "./pages/BecomeWholeSeller";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -33,6 +34,7 @@ export default function App() {
           <Route path="Products/:id" element={<ProductDetails />} />
           <Route path="about" element={<AboutUs />} />
           <Route path="ContactUs" element={<ContactUs />} />
+          <Route path="WholeSeller" element={<BecomeWholeSeller />} />
         </Route>
       </Routes>
     </Router>
