@@ -8,7 +8,6 @@ import teninch from "../../assets/10inch.svg";
 import threeinch from "../../assets/3inch.svg";
 import fourteeninch from "../../assets/14inch.svg";
 
-// Exported as named export (change to default if preferred)
 export const ProductsGrid = () => {
   const products = [
     { id: "1", title: "1/2 Inch PVC Pipe", img: halfinch },
