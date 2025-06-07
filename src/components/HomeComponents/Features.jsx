@@ -19,13 +19,13 @@ const Features = () => {
 
   return (
     <div className="bg-[#eaf0fa] py-16 px-4">
-      <div className="max-w-6xl mx-auto bg-white h-56 rounded-lg shadow-md p-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="max-w-6xl mx-auto bg-white rounded-lg shadow-md p-6 sm:p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
         {features.map((feature, index) => (
           <div key={index}>
-            <h3 className="text-blue-800 font-bold text-lg mb-3">
+            <h3 className="text-blue-800 font-bold text-lg sm:text-xl mb-2">
               {feature.title}
             </h3>
-            <p className="text-gray-700 text-sm leading-relaxed">
+            <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
               {feature.description}
             </p>
           </div>

@@ -2,9 +2,10 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.svg";
-import logof from "../../assets/logo-f.svg"; // Adjust the path as necessary
+import logof from "../../assets/logo-f.svg";
+import { ChevronDown } from "lucide-react";
 
-const navTabs = ["Home", "About Us", "Products", "Contact"];
+const navTabs = ["Home", "About Us", "Products ", "Contact"];
 const routes = ["/", "/about", "/Products", "/ContactUs"];
 
 const Navbar = () => {
@@ -53,9 +54,12 @@ const Navbar = () => {
                 <Link
                   key={index}
                   to={routes[index]}
-                  className="relative text-gray-700 font-medium hover:text-[#134697] transition-all duration-300 group py-2"
+                  className="relative text-gray-700 hover:text-[#134697] transition-all duration-300 group py-2 flex items-center gap-1"
                 >
                   {tab}
+                  {tab.trim() === "Products" && (
+                    <ChevronDown className="w-4 h-4 text-gray-500 group-hover:text-[#134697]" />
+                  )}
                   <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#134697] group-hover:w-full transition-all duration-300"></div>
                 </Link>
               ))}
@@ -64,15 +68,12 @@ const Navbar = () => {
             {/* CTA Button & Mobile Menu */}
             <div className="flex items-center space-x-4">
               {/* Get Quote Button */}
-              <a
-                href="/WholeSeller"
-                className="hidden lg:block relative overflow-hidden group"
+              <Link
+                to="/WholeSeller"
+                className="hidden lg:block relative overflow-hidden group bg-[#134697] text-white px-6 py-2 rounded-full font-light"
               >
-                <button className="bg-[#134697] text-white px-6 py-2.5 rounded-full font-semibold transition-all duration-300">
-                  <span className="relative z-10">Become a Wholesaler</span>
-                  {/* <div className="absolute inset-0 bg-[#134697] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div> */}
-                </button>
-              </a>
+                Become a Wholesaler
+              </Link>
 
               {/* Mobile Menu Button */}
               <button
@@ -131,16 +132,14 @@ const Navbar = () => {
               </div>
 
               {/* Mobile CTA Button */}
-              <div className="mt-8 pt-6 border-t border-gray-100">
-                <a
-                  href="/ContactUs"
-                  className="block w-full"
+              <div className="mt-8">
+                <Link
+                  to="/WholeSeller"
+                  className="block w-full bg-[#134697] py-6 px-2 text-white rounded-full text-center"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  <button className="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white py-3 px-6 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
-                    Become a sel
-                  </button>
-                </a>
+                  Become a Wholesaler
+                </Link>
               </div>
             </div>
           </div>

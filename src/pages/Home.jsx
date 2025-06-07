@@ -6,6 +6,7 @@ import ProductRange from "../components/HomeComponents/ProductRange";
 import WhyChooseUs from "../components/HomeComponents/WhyChooseUs";
 import Testimonials from "../components/HomeComponents/Testimonials";
 import Quality from "../components/HomeComponents/Quality";
+import { HdpePipeTable } from "../components/HomeComponents/HdpePipeTable";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <ProductRange />
       <Basecontact />
       <Quality />
+      <HdpePipeTable />
       <FAQs />
       <Testimonials />
     </div>
