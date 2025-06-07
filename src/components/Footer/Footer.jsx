@@ -3,7 +3,7 @@ import Images from "../../assets/images";
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-800 text-white">
+    <footer className="bg-[#134697] text-white">
       {/* Main Footer Content */}
       <div className="px-6 md:px-20 py-8">
         <div className="max-w-7xl mx-auto">
@@ -12,7 +12,11 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <div className="relative">
-                  <img src={Icons.logo} alt="Logo Icon" className="w-10 h-10 z-50" />
+                  <img
+                    src={Icons.logo}
+                    alt="Logo Icon"
+                    className="w-10 h-10 z-50"
+                  />
                 </div>
                 <img src={Icons.logof} alt="Logo Text" className="h-6" />
               </div>
@@ -107,30 +111,25 @@ const Footer = () => {
 
               {/* Social Media Icons */}
               <div className="flex gap-6">
-                <a
-                  href="#"
-                  title="Facebook"
-                >
+                <a href="#" title="Facebook">
                   <img src={Images.fb} className="size-6" alt="facebook-icon" />
                 </a>
-                <a
-                  href="#"
-                  title="WhatsApp"
-                >
-                  <img src={Images.whatsapp} className="size-6" alt="whatsapp-icon" />
+                <a href="#" title="WhatsApp">
+                  <img
+                    src={Images.whatsapp}
+                    className="size-6"
+                    alt="whatsapp-icon"
+                  />
                 </a>
-                <a
-                  href="#"
-                  title="LinkedIn"
-                >
-                  <img src={Images.LinkedIn} className="size-6" alt="LinkedIn-icon" />
+                <a href="#" title="LinkedIn">
+                  <img
+                    src={Images.LinkedIn}
+                    className="size-6"
+                    alt="LinkedIn-icon"
+                  />
                 </a>
-                <a
-                  href="#"
-                  title="Twitter"
-                >
+                <a href="#" title="Twitter">
                   <img src={Images.X} className="size-6" alt="twitter-icon" />
-
                 </a>
               </div>
             </div>
