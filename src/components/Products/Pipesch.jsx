@@ -1,38 +1,8 @@
 import vector from "../../assets/Rectangle.svg";
+import { pipeFeatures } from "../../Helpers/Data";
 
 const Pipesch = () => {
-  const pipeFeatures = [
-    {
-      title: "Exceptional Durability",
-      description:
-        "Our uPVC pipes are built to last. Engineered from high-grade unplasticized PVC, they resist physical wear, heavy loads, and external pressure — ensuring long-term performance even in demanding conditions.",
-    },
-    {
-      title: "Leak-Proof Construction",
-      description:
-        "Thanks to precision joints and uniform wall thickness, our pipes guarantee a leak-free connection system, minimizing water loss and system failure.",
-    },
-    {
-      title: "Corrosion and Chemical Resistance",
-      description:
-        "Unlike metal alternatives, PVC pipes do not corrode or react with most chemicals, making them ideal for transporting potable water, industrial fluids, or corrosive substances.",
-    },
-    {
-      title: "Lightweight & Easy to Install",
-      description:
-        "PVC pipes are significantly lighter than metal or concrete alternatives, reducing transportation costs and enabling quick, hassle-free installations with basic tools.",
-    },
-    {
-      title: "UV & Weather Resistant",
-      description:
-        "With built-in UV stabilization, our pipes withstand prolonged exposure to sunlight, humidity, and temperature fluctuations without degradation or discoloration.",
-    },
-    {
-      title: "Eco-Friendly and Recyclable",
-      description:
-        "Our pipes are free from hazardous plasticizers and can be recycled after use — making them a sustainable choice for long-term infrastructure.",
-    },
-  ];
+
 
   return (
     <div className=" bg-white grid grid-cols-1 sm:grid-cols-2 gap-6 mx-auto leading-normal">

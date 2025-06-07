@@ -2,8 +2,8 @@ import Testimonials from "../components/HomeComponents/Testimonials";
 import { Applications } from "../components/Products/Applications";
 import { Banner } from "../components/Products/Banner";
 import Pipesch from "../components/Products/Pipesch";
-import { ProductsGrid } from "../components/Products/ProductsGrid";
-
+import ProductSearch from "../components/Products/ProductSearch";
+import ProductsGrid from "../components/Products/ProductsGrid"
 const Products = () => {
   return (
     <div className="p-6 space-y-10">
@@ -13,7 +13,10 @@ const Products = () => {
           <ProductsGrid />
         </div>
         {/* Right column */}
-        <div></div>
+        <div>
+          <ProductSearch />
+        </div>
+
       </div>
       {/* Second section */}
       <div className="mx-auto">
